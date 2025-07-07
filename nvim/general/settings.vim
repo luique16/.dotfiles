@@ -2,7 +2,7 @@ set splitright
 set splitbelow
 
 set autoindent " New lines inherit the indentation of previous lines.
-set noshowmode " Hide default status bar
+" set noshowmode " Hide default status bar
 set shiftround " When shifting lines, round the indentation to the nearest multiple of shiftwidth.
 set smarttab " Insert tabstop number of spaces when the tab key is pressed.
 set shiftwidth=4 " When shifting, indent using two spaces.
@@ -28,14 +28,13 @@ set scrolloff=8 " The number of screen lines to keep above and below the cursor.
 set nowrap " Disable line wrapping.
 set sidescrolloff=10 " The number of screen columns to keep to left and right of the cursor.
 set nocompatible " Disable compatible for plugin compatible.
-set nrformats+=alpha " Increment letter
+" set nrformats+=alpha " Increment letter
 
 " syntax on " Enable syntax into plugins.
 " syntax enable " Enable syntax highlighting.
 
 " USER INTERFACE OPTIONS//
 
-set colorcolumn=120 " Shows a column
 set ruler " Always show cursor position.
 set cursorline " Highlight the line currently under cursor.
 set number " Show line numbers on the slidebar.
@@ -46,22 +45,4 @@ set showmatch " Can reduce the need for %, the cursor will briefly jump to the m
 set clipboard=unnamedplus " Enable copies of files outside of vim.
 set hidden " TextEdit might fail if hidden is not set.
 set updatetime=100 " Change the time of update
-
-" Fold
-function! MyFoldText()
-    "let line = getline(v:foldstart)
-    let foldedlinecount = v:foldend - v:foldstart + 1
-    return ' ⭐️ '. foldedlinecount." lines folded "
-endfunction
-set foldtext=MyFoldText()
-set foldmethod=indent
-set foldlevel=999999999
-" / Fold
-
-set shortmess-=S
-
-set cmdheight=1 " Remove under line
-
-autocmd FileType * set noexpandtab
-
-autocmd FileType * :set showtabline=0
+set guicursor=n-v-c:block

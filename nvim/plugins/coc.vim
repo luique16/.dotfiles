@@ -7,6 +7,8 @@ nnoremap <leader>rr <Plug>(coc-rename)
 nnoremap <leader>gd <Plug>(coc-definition)
 nnoremap <leader>gr <Plug>(coc-references)
 
-nnoremap <leader>prw :CocSearch <C-r>=expand("<cword>")<CR><CR>
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword> ")<CR><CR>
 
 let g:coc_enable_locationlist = 1
+
+au BufRead,BufNewFile *.qs set filetype=cs " set qs files as cs files

@@ -1,41 +1,28 @@
-# net fish_greeting
+set fish_greeting
 
-### PLUGINS ###
-# set fish_plugins autojump #vi-mode
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
 
-### ALIASES ###
-alias vim="~/.nvim0.6m/squashfs-root/AppRun"
-alias tslide="node ~/GitHub/Repos/tslide/index.js"
-alias rust="rustc"
 alias l="la"
-alias ticker="~/Downloads/ticker-4.2.0-linux-amd64/ticker"
-alias to="~/.scripts/tmux-open"
 alias py="python3"
-alias tb="~/.yarn/bin/tb"
-alias ls="lsd"
-alias md="mdp -f"
-alias cat="bat"
-alias cb="~/.local/bin/change_background"
-alias devc="tmuxinator dev"
-alias fzf="fzf --height 10"
-alias sk="screenkey -s medium --scr 1 -p bottom --geometry 510x300+800-10"
-alias ino="arduino-cli"
-alias lg="lazygit"
-alias code="code-insiders"
-alias vifm="set TERM xterm-256color; ~/.local/bin/vifm"
+alias vim="nvim"
 alias g="git"
+alias bat="batcat"
+alias cat="bat --paging=never"
+alias z="zoxide"
+alias bundle="bundle3.0"
+alias qsharp="python3 ~/.config/qsharp/exec.py"
 
-### PLUGINS CONFIG ###
-# set vi_mode_default vi_mode_normal 	# VI-MODE
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
 
-### RANDOM COLOR SCRIPT ###
-# colorscript exec 31
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk-amd64"
+export PATH="$JAVA_HOME/bin:$PATH"
+export MAVEN_HOME="/usr/share/maven"
+export PATH="$MAVEN_HOME/bin:$PATH"
 
-### CONFIGURATION ###
-#fish_vi_key_bindings
-
-### PATH ###
-export GOPATH=(go env GOPATH)
-export EDITOR="nvim"
-
-# echo ""
+z init fish | source

@@ -1,25 +1,10 @@
 {
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact",
-		"typescript": "typescriptreact",
-		"vue-html": "html"
-	},
-	"languageserver": {
-		"arduino":{ 
-			"command":"$HOME/.local/bin/arduino-language-server",
-			"rootPatterns":["*.ino"],
-			"filetypes":["arduino"],
-			"args":["-cli", "arduino-cli", "-clangd", "/home/luis/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd", "-cli-config", "$HOME/.arduino15/arduino-cli.yaml"]
-			}
-	},
-	"clangd.path": "/home/luis/.config/coc/extensions/coc-clangd-data/install/12.0.0/clangd_12.0.0/bin/clangd",
-	"diagnostic.virtualText": true,
-	"diagnostic.enableSign": false,
-
-	"clangd.semanticHighlighting": true,
-	"diagnostic.locationlistUpdate": true,
-
-	"diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
 	"diagnostic.virtualTextPrefix": "      ██ ",
-	"diagnostic.refreshOnInsertMode": true
+    "diagnostic.refreshOnInsertMode": true,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/16.0.2/clangd_16.0.2/bin/clangd",
+    "svelte.enable-ts-plugin": true,
+    "biome.trace.server": "verbose",
+    "coc.preferences.bracketEnterImprove": true
 }
