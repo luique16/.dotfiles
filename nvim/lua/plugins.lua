@@ -66,15 +66,28 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
             config = function() require("plugins.nvim-tree") end,
         },
 
+        -- Leap
+        {
+            "ggandor/leap.nvim",
+            dependencies = {
+                "tpope/vim-repeat",
+            },
+            config = function() require("plugins.leap") end
+        },
+
         -- Be good
         { "ThePrimeagen/vim-be-good" },
+        { 'vuciv/golf' },
 
         -- FZF
         {
             "junegunn/fzf",
-            build = function() require("plugins.fzf") end,
+            build = ":call fzf#install()"
         },
-        { "junegunn/fzf.vim" },
+        {
+            "junegunn/fzf.vim",
+            config = function() require("plugins.fzf") end,
+        },
 
         -- Temas
         { "ellisonleao/gruvbox.nvim" },
